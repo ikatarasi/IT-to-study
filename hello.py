@@ -1,13 +1,20 @@
-import tkinter
+import tkinter as tk
+import random
 
 
-def btn_click():
-    print('ボタンがクリックされました')
+def bot():
+    label = tk.Label(text='Hello World!')  # ラベルを定義
+    x = random.randrange(640)
+    y = random.randrange(480)
+    label.place(x=x, y=y)
+    return
 
-tki = tkinter.Tk()
-tki.geometry('300x200')
-tki.title('ボタンイベントの検証')
 
-btn = tkinter.Button(tki, text='計算', command=btn_click)
-btn.place(x=140, y=170)
-tki.mainloop()
+window = tk.Tk()
+window.title('Title')
+window.geometry('640x640')
+
+btn = tk.Button(window, text='Hello!', command = bot)
+btn.place(x=10, y=10)
+
+btn.mainloop()
