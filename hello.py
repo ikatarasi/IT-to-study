@@ -1,20 +1,47 @@
-import tkinter as tk
-import random
+import numpy as np
 
+N = np.array([['.', '.', '.'],
+              ['.', '.', '.'],
+              ['.', '.', '.']])
 
-def bot():
-    label = tk.Label(text='Hello World!')  # ラベルを定義
-    x = random.randrange(640)
-    y = random.randrange(480)
-    label.place(x=x, y=y)
-    return
+num = input('数字を入力してください')
+num_int = int(num)
 
-
-window = tk.Tk()
-window.title('Title')
-window.geometry('640x640')
-
-btn = tk.Button(window, text='Hello!', command = bot)
-btn.place(x=10, y=10)
-
-btn.mainloop()
+if 0 == num_int:
+    print(N)
+elif 1 == num_int:
+    N[:1, :1] = "#"
+    print(N)
+elif 2 == num_int:
+    N[:1, :2] = "#"
+    print(N)
+elif 3 == num_int:
+    N[:1, :3] = "#"
+    print(N)
+elif 4 == num_int:
+    N[:1, :3] = "#"
+    N[:2, :1] = "#"
+    print(N)
+elif 5 == num_int:
+    N[:1, :3] = "#"
+    N[:2, :2] = "#"
+    print(N)
+elif 6 == num_int:
+    N[:1, :3] = "#"
+    N[:2, :3] = "#"
+    print(N)
+elif 7 == num_int:
+    N[:1, :3] = "#"
+    N[:2, :3] = "#"
+    N[:3, :1] = "#"
+    print(N)
+elif 8 == num_int:
+    N[:1, :3] = "#"
+    N[:2, :3] = "#"
+    N[:3, :2] = "#"
+    print(N)
+elif 9 == num_int:
+    N[:1, :3] = "#"
+    N[:2, :3] = "#"
+    N[:3, :3] = "#"
+    print(N)
